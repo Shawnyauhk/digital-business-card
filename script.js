@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const shareData = {
                 title: 'Shawn Yau - Foresys Co., Ltd.',
                 text: 'Check out this digital business card.',
-                url: 'https://www.wired.com' // Placeholder URL
+                url: 'https://foresyscard.netlify.app/' // Placeholder URL
             };
             
             const currentLangIsZh = bodyEl.classList.contains('lang-active-zh');
