@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shawn Yau // Foresys Co., Ltd.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card-container animate-on-load">
+        <button id="lang-toggle-btn" class="lang-toggle-btn">
+            <span class="lang-en">中文</span>
+            <span class="lang-zh">EN</span>
+        </button>
+
+        <div class="card">
+            <header class="card-header">
+                <div class="header-logo-container">
+                    <img src="photo/foresys.png" alt="Foresys Logo" class="logo">
+                </div>
+                <div class="company-info-header">
+                    <span class="header-tag">
+                        <span class="lang-zh">組織</span><span class="lang-en">ORGANIZATION</span>
+                    </span>
+                    <h1>
+                        <span class="lang-zh">科先系統有限公司</span>
+                        <span class="lang-en">Foresys Co., Ltd.</span>
+                    </h1>
+                    <a href="http://www.foresys.com.hk" target="_blank" class="website-link">
+                        <i class="fas fa-link"></i> www.foresys.com.hk
+                    </a>
+                </div>
+            </header>
+
+            <section class="card-body">
+                <div class="profile-section">
+                    <div class="profile-avatar-container">
+                        <img src="photo/shawn.png" alt="Shawn Yau" class="profile-avatar">
+                    </div>
+                    <div class="profile-details">
+                        <h2 class="profile-name">
+                            <span class="lang-zh">邱永生 </span>
+                            <span class="lang-en">Shawn Yau</span>
+                        </h2>
+                        <p class="profile-title">
+                            <span class="lang-zh">高級應用專員</span>
+                            <span class="lang-en">Senior Application Specialist</span>
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="section-divider">
+
+                <nav class="tabs-nav">
+                    <button class="tab-link active" data-tab-target="#tab-contact">
+                        <span class="lang-zh">聯繫方式</span><span class="lang-en">Contact</span>
+                    </button>
+                    <button class="tab-link" data-tab-target="#tab-about-me">
+                        <span class="lang-zh">個人簡介</span><span class="lang-en">About Me</span>
+                    </button>
+                    <button class="tab-link" data-tab-target="#tab-about-company">
+                        <span class="lang-zh">公司簡介</span><span class="lang-en">About Firm</span>
+                    </button>
+                </nav>
+
+                <div class="tabs-content">
+                    <!-- Contact Tab Content (WITH New Buttons) -->
+                    <div id="tab-contact" class="tab-panel active">
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope icon-contact"></i>
+                                <div class="contact-info">
+                                    <span class="contact-label">EMAIL</span>
+                                    <a href="mailto:shawnyau@foresys.com">shawnyau@foresys.com</a>
+                                </div>
+                                <button class="copy-btn"><i class="far fa-copy"></i></button>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone icon-contact"></i>
+                                <div class="contact-info">
+                                    <span class="contact-label"><span class="lang-zh">電話</span><span class="lang-en">TEL</span></span>
+                                    <a href="tel:39194000">39194000</a>
+                                </div>
+                                <button class="copy-btn"><i class="far fa-copy"></i></button>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-fax icon-contact"></i>
+                                <div class="contact-info">
+                                    <span class="contact-label"><span class="lang-zh">傳真</span><span class="lang-en">FAX</span></span>
+                                    <span class="fax-number">39194099</span>
+                                </div>
+                                <button class="copy-btn"><i class="far fa-copy"></i></button>
+                            </div>
+                            <div class="contact-item address-item">
+                                <i class="fas fa-map-marker-alt icon-contact"></i>
+                                <div class="contact-info">
+                                    <span class="contact-label"><span class="lang-zh">地址</span><span class="lang-en">Address</span></span>
+                                    <span class="address-text">
+                                        <span class="lang-zh">荃灣柴灣角街73號金岸科技中心505室</span>
+                                        <span class="lang-en">Rm 505, Cameron Sino Technology Centre, 73 Chai Wan Kok St, Tsuen Wan</span>
+                                    </span>
+                                </div>
+                                <button class="copy-btn"><i class="far fa-copy"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Correct Placement for NEW Action Buttons -->
+                        <div class="actions-group">
+                            <a id="addToFavoritesBtn" href="#" class="action-btn">
+                                <i class="fas fa-star"></i>
+                                <span><span class="lang-zh">加入我的最愛</span><span class="lang-en">Add to Favorites</span></span>
+                            </a>
+                            <a id="saveToDesktopBtn" href="#" class="action-btn">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span><span class="lang-zh">保存到桌面</span><span class="lang-en">Save to Desktop</span></span>
+                            </a>
+                            <a id="shareUrlBtn" href="#" class="action-btn">
+                                <i class="fas fa-share-alt"></i>
+                                <span><span class="lang-zh">分享此頁面</span><span class="lang-en">Share this Page</span></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- About Me Tab Content -->
+                    <div id="tab-about-me" class="tab-panel">
+                        <div class="prose-content">
+                            <p>
+                                <span class="lang-zh">SHAWN 是一位沉穩可靠的工作伙伴, 其精通香港會計準則及資訊科技知識, 相信定能為顧客提供高質素的支援。</span>
+                                <span class="lang-en">SHAWN is a calm and reliable working partner, proficient in Hong Kong accounting standards and technological knowledge. He is confident in providing high-quality support to customers.</span>
+                            </p>
+                            <h4><span class="lang-zh">興趣</span><span class="lang-en">INTERESTS</span></h4>
+                            <ul>
+                                <li><span class="lang-zh">探索科技知識</span><span class="lang-en">Exploring technological knowledge</span></li>
+                                <li><span class="lang-zh">研究歷史</span><span class="lang-en">Researching history</span></li>
+                                <li><span class="lang-zh">打高爾夫球</span><span class="lang-en">Playing golf</span></li>
+                                <li><span class="lang-zh">打壁球</span><span class="lang-en">Playing squash</span></li>
+                                <li><span class="lang-zh">健身</span><span class="lang-en">Fitness</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- About Company Tab Content -->
+                    <div id="tab-about-company" class="tab-panel">
+                        <div class="prose-content">
+                            <p>
+                                <span class="lang-zh">我們成立於一九九零年，是一間資訊科技發展及顧問公司。開發系統包括LIBRA律師樓會計系統、TABIS旅行社管理系統及ERP企業資源管理系統。近年本公司亦大力發展A.I. 人工智能科技, 當中包括A.I. 教育系統及智能化辦公系統, 以滿足不同客戶在資訊科技轉變上的各種需要。</span>
+                                <span class="lang-en">Established in 1990, we are an information technology development and consulting company. Our developed systems include LIBRA solicitor's accounting system, TABIS travel agency management system, and ERP enterprise resource planning system. In recent years, our company has also vigorously developed A.I. artificial intelligence technology, including A.I. education systems and intelligent office systems, to meet the various needs of different customers in the face of information technology changes.</span>
+                            </p>
+                            <div class="cta-button-container">
+                                <a href="https://www.foresys.com.hk/ai.php" target="_blank" class="action-btn ai-project-btn">
+                                    <i class="fas fa-rocket"></i>
+                                    <span><span class="lang-zh">探索我們的 AI 項目</span><span class="lang-en">EXPLORE OUR AI PROJECTS</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<!-- index.html (在 </section> 和 <footer> 之間插入) -->
+
+<!-- ... card-body 的所有內容 ... -->
+            </section>
+
+            <!-- START: 在這裡插入地圖區塊 -->
+            <section class="map-section">
+                <h3>
+                    <span class="lang-zh">公司位置</span>
+                    <span class="lang-en">Company Location</span>
+                </h3>
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.4900194858183!2d114.10625797599515!3d22.372877240259466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f9006683d42f%3A0x1afbcb16c8addf89!2z6YeR5bK456eR5oqA5Lit5b-D!5e0!3m2!1szh-TW!2shk!4v1749106740788!5m2!1szh-TW!2shk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+            <!-- END: 地圖區塊結束 -->
+
+            <footer class="card-footer">
+<!-- ... footer 的內容保持不變 ... -->
+            <footer class="card-footer">
+                <a href="https://www.google.com/maps/search/?api=1&query=荃灣柴灣角街73號金岸科技中心505室" target="_blank" class="map-link">
+                    <span class="map-label"><span class="lang-zh">地圖</span><span class="lang-en">MAP</span></span>
+                    <span class="map-address"><span class="lang-zh">金岸科技中心505室</span><span class="lang-en">Golden Bear Ind. Centre, 505</span></span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <p class="copyright">© <span id="currentYear"></span> Foresys Co., Ltd.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- QR Code Modal (No Change) -->
+    <div id="qrModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-btn">×</span>
+            <p id="qrModalTitle"></p>
+            <div id="qrcodeCanvas"></div>
+        </div>
+    </div>
+
+     <!-- Instruction Modal (No Change) -->
+    <div id="instructionModal" class="modal">
+        <div class="modal-content instruction-modal-content">
+            <span class="close-modal-btn">×</span>
+            <h3 id="instructionTitle" class="modal-title">
+                <span class="lang-zh">如何將網頁保存到桌面</span>
+                <span class="lang-en">How to Save to Desktop</span>
+            </h3>
+            <div class="instruction-body">
+                <div class="instruction-section">
+                    <h4><i class="fab fa-apple"></i> <span class="lang-zh">蘋果 iOS (Safari)</span><span class="lang-en">Apple iOS (Safari)</span></h4>
+                    <p>
+                        <span class="lang-zh">1. 點擊瀏覽器底部的「分享」<i class="fas fa-share-square"></i>圖標。</span>
+                        <span class="lang-en">1. Tap the "Share" <i class="fas fa-share-square"></i> icon at the bottom.</span>
+                    </p>
+                    <p>
+                        <span class="lang-zh">2. 在選單中向下滑動，選擇「加入主畫面」。</span>
+                        <span class="lang-en">2. Scroll down the menu and select "Add to Home Screen".</span>
+                    </p>
+                     <p>
+                        <span class="lang-zh">3. 點擊「新增」即可。</span>
+                        <span class="lang-en">3. Tap "Add" to confirm.</span>
+                    </p>
+                </div>
+                <div class="instruction-section">
+                    <h4><i class="fab fa-android"></i> <span class="lang-zh">安卓 (Chrome)</span><span class="lang-en">Android (Chrome)</span></h4>
+                     <p>
+                        <span class="lang-zh">1. 點擊右上角的三個點「<i class="fas fa-ellipsis-v"></i>」選單。</span>
+                        <span class="lang-en">1. Tap the three dots menu "<i class="fas fa-ellipsis-v"></i>" in the top-right corner.</span>
+                    </p>
+                    <p>
+                        <span class="lang-zh">2. 選擇「新增至主螢幕」。</span>
+                        <span class="lang-en">2. Select "Add to Home screen".</span>
+                    </p>
+                     <p>
+                        <span class="lang-zh">3. 確認名稱後點擊「新增」。</span>
+                        <span class="lang-en">3. Confirm the name and tap "Add".</span>
+                    </p>
+                </div>
+                 <div class="instruction-section">
+                    <h4><i class="fas fa-desktop"></i> <span class="lang-zh">電腦 (Chrome/Edge)</span><span class="lang-en">Desktop (Chrome/Edge)</span></h4>
+                    <p>
+                        <span class="lang-zh">1. 點擊右上角的三個點「<i class="fas fa-ellipsis-v"></i>」選單。</span>
+                        <span class="lang-en">1. Click the three dots menu "<i class="fas fa-ellipsis-v"></i>" in the top-right corner.</span>
+                    </p>
+                     <p>
+                        <span class="lang-zh">2. 選擇「更多工具」 > 「建立捷徑」。</span>
+                        <span class="lang-en">2. Select "More tools" > "Create shortcut".</span>
+                    </p>
+                     <p>
+                        <span class="lang-zh">3. 點擊「建立」即可在桌面看到圖標。</span>
+                        <span class="lang-en">3. Click "Create" to see the icon on your desktop.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
