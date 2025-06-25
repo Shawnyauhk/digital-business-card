@@ -144,30 +144,142 @@ hr.section-divider {
 @keyframes fadeInPanel { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
 /* --- Contact Details --- */
-.contact-details { display: flex; flex-direction: column; gap: 20px; }
-.contact-item { display: flex; align-items: flex-start; gap: 15px; }
-.icon-contact {
-    color: var(--accent-color2); font-size: 1rem;
-    margin-top: 5px; width: 16px; text-align: center;
-}
-.contact-info { flex-grow: 1; }
-.contact-label {
-    font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);
-    text-transform: uppercase; letter-spacing: 1px;
-}
-.contact-info a, .contact-info .fax-number, .contact-info .address-text {
-    display: block; font-family: var(--font-body); font-size: 0.95rem;
-    color: var(--text-primary); text-decoration: none;
-}
-.contact-info a:hover { color: var(--accent-color1); }
-.copy-btn {
-    background: none; border: 1px solid var(--border-color);
-    color: var(--text-secondary); padding: 8px; font-size: 0.8rem;
-    cursor: pointer; transition: all 0.2s ease;
-}
-.copy-btn:hover { border-color: var(--accent-color1); color: var(--accent-color1); }
-.copy-btn.copied { background: #28a745; color: #fff; border-color: #28a745; }
+/* 在 style.css 中 */
 
+/* 通用 .contact-item 佈局 (保持不變) */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+
+.icon-contact {
+    font-size: 1.1em;
+    color: var(--accent-color1); /* 默認圖標顏色 */
+    margin-right: 12px;
+    width: 22px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 0.2em; /* 調整圖標與第一行文字的對齊 */
+}
+
+.contact-item .whatsapp-icon {
+    color: #25D366; /* WhatsApp 綠色 */
+    margin-top: 0.1em; /* WhatsApp 圖標可能需要微調以與其標籤對齊 */
+}
+
+.contact-content {
+    display: flex;
+    /* 默認情況下，讓 label 和 value 垂直排列，除非被特定規則覆蓋 */
+    flex-direction: column;
+    flex-grow: 1;
+    line-height: 1.5; /* 調整整體行高 */
+}
+
+/* 標籤樣式 (EMAIL, TEL, FAX, ADDRESS, WhatsApp) - 統一 */
+.contact-label {
+    font-size: 0.75rem;    /* 標籤字體小一點 */
+    color: var(--text-secondary); /* 淺灰色 */
+    text-transform: uppercase;
+    margin-bottom: 2px; /* 標籤和值之間的垂直間距 */
+    display: block; /* 確保標籤獨佔一行 */
+    font-weight: 500;
+}
+
+/* 主要信息值 (Email 地址, WhatsApp 號碼, 電話, 傳真, 地址) - 統一 */
+.contact-value {
+    font-size: 1rem;         /* 主要信息字體大小 */
+    color: var(--text-primary);  /* 主要信息顏色 */
+    font-weight: 400;          /* 主要信息字重 */
+    word-break: break-all;
+    display: block; /* 確保值從新行開始 (除了TEL/FAX的特殊處理) */
+    line-height: 1.4; /* 值的行高 */
+}
+
+/* --- 特殊佈局調整 --- */
+
+/* 1. Email: 標籤和值垂直排列 (由 .contact-content 的 flex-direction: column; 和 .contact-label/.contact-value 的 display: block; 處理) */
+
+/* 2. WhatsApp: 標籤和值垂直排列，但整個區域可點擊 */
+.contact-item a.whatsapp-clickable-area.contact-content {
+    display: flex; /* 保持 flex 以便內部元素排列 */
+    flex-direction: column; /* 標籤和值垂直排列 */
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1;
+}
+.contact-item a.whatsapp-clickable-area.contact-content .contact-label,
+.contact-item a.whatsapp-clickable-area.contact-content .contact-value {
+    /* 繼承上面的 .contact-label 和 .contact-value 樣式 */
+}
+.contact-item a.whatsapp-clickable-area.contact-content .contact-value.whatsapp-number {
+    color: var(--accent-color1); /* WhatsApp 號碼用強調色 */
+    text-decoration: underline; /* 給號碼加上下劃線，暗示可點擊 */
+}
+.contact-item a.whatsapp-clickable-area.contact-content:hover .contact-value.whatsapp-number {
+    color: var(--accent-color2); /* 滑鼠懸停時變色 */
+}
+
+
+/* 3. TEL 和 FAX: 標籤和值在同一行 */
+.contact-item:not(.address-item):not(:has(a.whatsapp-clickable-area)) .contact-content { /* 排除地址和 WhatsApp */
+    flex-direction: row;   /* 水平排列 */
+    align-items: baseline; /* 基線對齊 */
+}
+.contact-item:not(.address-item):not(:has(a.whatsapp-clickable-area)) .contact-content .contact-label {
+    display: inline;       /* 行內顯示 */
+    margin-bottom: 0;      /* 移除垂直間距 */
+    margin-right: 8px;     /* 標籤和值之間的水平間距 */
+}
+.contact-item:not(.address-item):not(:has(a.whatsapp-clickable-area)) .contact-content .contact-value {
+    display: inline;       /* 行內顯示 */
+}
+
+
+/* 4. Address: 標籤和值垂直排列 (由 .contact-content 的 flex-direction: column; 和 .contact-label/.contact-value 的 display: block; 處理) */
+.address-item .contact-label {
+    /* margin-bottom: 4px; /* 已在通用 .contact-label 中設置 */
+}
+.address-item .address-text .lang-zh,
+.address-item .address-text .lang-en {
+    display: block; /* 確保中英文地址各佔一行 */
+    /* 字體大小和顏色會繼承 .contact-value */
+}
+
+
+/* 針對 Email 和電話號碼的 <a> 標籤 (如果它們是 .contact-value) */
+.contact-item .contact-value a,
+a.contact-value {
+    color: var(--text-primary); /* 與 .contact-value 顏色一致 */
+    text-decoration: none;
+}
+.contact-item .contact-value a:hover,
+a.contact-value:hover {
+    color: var(--accent-color2);
+    text-decoration: underline;
+}
+
+
+/* 複製按鈕 (保持不變或微調) */
+.copy-btn {
+    background: #e9ecef; border: 1px solid transparent;
+    color: var(--text-secondary); padding: 5px 8px; font-size: 0.75rem;
+    border-radius: 5px; cursor: pointer; margin-left: auto; /* 改為 auto 將按鈕推到最右邊 */
+    flex-shrink: 0;
+    align-self: center; /* 嘗試使按鈕在垂直方向上居中於整個 .contact-item */
+    transition: all 0.2s ease;
+}
+/* ... 其他 copy-btn 樣式 ... */
+
+.map-link-icon { /* 如果地址行有地圖圖標 */
+    margin-left: 8px; /* 與複製按鈕保持一些距離 */
+    align-self: center;
+    color: var(--text-secondary);
+}
+.map-link-icon:hover {
+    color: var(--accent-color1);
+}
 /* --- Action Buttons --- */
 .actions-group { display: flex; flex-direction: column; gap: 10px; margin-top: 30px; }
 .action-btn {
@@ -366,6 +478,5 @@ hr.section-divider {
     display: block !important; /* qrcode.js 可能會設置 inline */
     margin: auto !important;
 }
+/* 在 style.css 中 */
 
-
-/* ... 其他 CSS ... */
